@@ -33,4 +33,4 @@ be able to finish it soon.
 
 Note: the classes are not the proper way of writing codes( i.e missing some property classes that could be used instead of the repeating the same functions in different classses)    
 
-
+video presentation of the solution running an emulator can be seen here: https://www.youtube.com/watch?v=16Qy9-NiYYM 
