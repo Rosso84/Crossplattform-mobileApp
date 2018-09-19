@@ -1,0 +1,42 @@
+<!--
+  Generated template for the AboneringsperiodePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Abonneringsperiode</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list *ngFor="let abon of abonnenement | async">
+    <ion-item>
+      <button ion-button clear >
+        <p id="btn-endre-txt">Endre</p>
+      </button>
+      <button ion-button clear end (click)="deleteAbonnement(abon)">
+        <p id="btn-avslutt-txt">Avslutt</p>
+      </button>
+    </ion-item>
+    <ion-item >
+      <p class="info-beskrivelse">Fra dato: </p>  {{abon.fraDato}}
+    </ion-item>
+    <ion-item>
+      <p class="info-beskrivelse">Til dato:  </p>  {{abon.tilDato}}
+    </ion-item>
+    <ion-item>
+      <p class="info-beskrivelse">Ukedag: </p>  {{abon.ukeDag}}
+    </ion-item>
+    <ion-item>
+      <p class="info-beskrivelse">LeveringsTid:  </p>  {{abon.leveringstid}}
+    </ion-item>
+    <ion-item>
+      <p class="info-beskrivelse" >Leverignsadresse:</p>  {{abon.leveringsadresse}}
+    </ion-item>
+  </ion-list>
+</ion-content>

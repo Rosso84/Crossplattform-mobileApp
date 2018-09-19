@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons end>
+      <button [disabled]="clicked" ion-button icon-only (click)="goToAbonnerPage()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Nyheter</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content id="container">
+  <!--<ion-spinner name="bubbles" *ngIf="loading"></ion-spinner>-->
+
+  <!--<ion-list *ngIf="!loading">-->
+  <ion-list padding>
+    <ion-item *ngFor="let vare of Varer | async">
+      <ion-icon class="md-calendar" *ngIf="vare.abonnerer" name="calendar" item-end small (click)="goToDineEnkeltVarerPage()">
+      </ion-icon>
+      <ion-icon class="md-add-circle" name="add-circle" item-end></ion-icon>
+      <ion-icon *ngIf="!vare.abonnerer" name=""></ion-icon>
+      <ion-thumbnail item-left (click)="goToDetailPage(vare)">
+        <img class="urlImage" [src]="vare.imgUrl">
+      </ion-thumbnail>
+      <div (click)="goToDetailPage(vare)">
+        <!--{{vare.abonnerer ? '' : ''}}-->
+        <p class="vare-pris-Txt" id="vare-navn">{{vare.vare}}</p>
+        <p class="vare-pris-Txt" id="vare-pris">kr{{vare.pris}} stk</p>
+      </div>
+
+      <div id="under-txt" (click)="goToDetailPage(vare)">
+        <p id="vekt-txt">{{vare.vekt}}</p>
+        <p id="kg-pris-txt">{{vare.kg_pris}}</p>
+      </div>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
+

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Personlig</ion-title>
+    <ion-buttons end>
+      <button ion-button clear (click)="signOut()">Logg ut</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="container">
+
+  <ion-list>
+    <ion-item>
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+      <p class="empty-item-vare-txt">Bestillinger</p>
+    </ion-item>
+    <ion-item (click)="goToDineAbonneringer()">
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+      Abonneringer
+    </ion-item>
+    <ion-item>
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+      <p class="empty-item-vare-txt">Kuponger</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+      <p class="empty-item-vare-txt">Pant</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+      <p class="empty-item-vare-txt">Instillinger</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+       <p class="empty-item-vare-txt">Priser og Utleveringer</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+       <p class="empty-item-vare-txt">Kundeservice</p>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+       <p class="empty-item-vare-txt">Bruker- og salgsbetingelser</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="arrow-forward" item-end></ion-icon>
+       <p class="empty-item-vare-txt">Personvernerklæring</p>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

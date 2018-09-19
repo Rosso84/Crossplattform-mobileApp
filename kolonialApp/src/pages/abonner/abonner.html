@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Opprett abonnement</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Abonnement fra dato:</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="FraDato">
+      </ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Abonnement til dato:</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="TilDato">
+      </ion-datetime>
+    </ion-item>
+  <!--<p align="center" class="intervall-txt">Intervall for dine leveringer</p>-->
+    <ion-item>
+      <ion-label floating>Leveringsdag eks man/tir</ion-label>
+      <ion-input type="text"  placeholder="" [(ngModel)]="ukeDag"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Tid på dagen</ion-label>
+      <ion-datetime displayFormat="HH:mm" [(ngModel)]="LeveringssTid">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Leveringsadresse</ion-label>
+      <ion-input [(ngModel)]="LeveringsAdresse"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button clear block ion-button icon-start (click)="addNewAbonnement()">
+   Opprett
+  </button>
+</ion-content>

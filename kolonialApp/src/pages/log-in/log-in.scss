@@ -1,0 +1,54 @@
+page-log-in {
+
+  ion-content {
+    background-image: url(../assets/imgs/fruitsveg.png);   //hadde store problemer med å få dette til å fungere på en emulator.
+    background-size: cover !important;
+  }
+
+
+  /**/.title{
+    margin-top:30px;
+    color: #c8dcff
+
+  }
+  .title-note{
+    color: #c8dcff;
+  }
+
+  .container {
+   height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   & > * {
+      margin-top: 20px;
+      align-self: stretch;
+    }
+  }
+
+  //ressurser fra: stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
+  //<!--skjuler scrollbaren-->
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
+  .logInn-btn{
+    background-color: darkgoldenrod;
+  }
+
+  .ny-konto-btn{
+    background-color: #2ec95c;
+  }
+  .priser{
+    color: #c8dcff;
+  }
+  #appium_username_input {
+    height: 30px;
+  }
+  .input_fields{
+    opacity: 0.6;
+  }
+
+}

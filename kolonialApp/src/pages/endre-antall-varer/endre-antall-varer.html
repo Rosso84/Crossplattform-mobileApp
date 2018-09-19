@@ -1,0 +1,33 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Endre antall</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding id="container">
+
+<ion-list>
+  <ion-item>
+    <ion-card>
+      <ion-card-title>
+        {{vare.vare}}
+      </ion-card-title>
+      <ion-card-content>
+        <ion-thumbnail>
+          <img id="urlImage" [src]="vare.imgUrl">
+        </ion-thumbnail>
+       <p id="antall-txt">{{vare.antall}} stk registrert</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Antall</ion-label>
+    <ion-input type="number" [(ngModel)]="antall"></ion-input>
+  </ion-item>
+</ion-list>
+  <button ion-button (click)="updateAntallVarer()">Endre</button>
+</ion-content>

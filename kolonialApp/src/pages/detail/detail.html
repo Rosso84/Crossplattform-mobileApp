@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <p>{{Vare.vare}}</p>
+    </ion-title> <!--vare betyr vareType /navn på varen eks epler..)-->
+    <ion-buttons end>
+      <button ion-button icon-only><!--(click)="share()" innsettes her hvis nødvendig-->
+        <ion-icon name="share"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="goToAbonnerPage()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-card>
+      <ion-card-header>
+        {{Vare.vare}} <br>
+        <p class="greyText">{{Vare.vekt}}</p>
+        <ion-thumbnail>
+          <img id="urlImage" [src]="Vare.imgUrl">
+        </ion-thumbnail>
+
+      </ion-card-header>
+      <ion-card-title>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p id="detaljeText">{{Vare.detaljer}}</p>
+            </ion-col>
+            <ion-col>
+              <p id="antallvarer-txt">
+              <span id="antall-nummer-txt">
+                {{antallVarer}}
+              </span>
+                stk valgt
+              </p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </ion-card-title>
+    </ion-card>
+    <ion-item>
+      kr{{Vare.pris}}
+      <ion-icon *ngIf="antallVarer > 0" name="remove-circle" item-end id="btn-reduce-antall"
+                (click)="decreaseAntallVarer()">
+      </ion-icon>
+      <ion-icon *ngIf="antallVarer < 0 || antallVarer == 0" name="">
+      </ion-icon>
+
+      <ion-icon class="md-add-circle" name="add-circle" item-end (click)="incrementAntallVarer()"></ion-icon>
+      <button [disabled]="Vare.abonnerer || antallVarer == 0" id="btnAbonner" ion-button color="primary" round (click)="addEnkelVareTilAbonnement()">
+        Abonner
+      </button>
+      <br>
+      <p class="greyText">{{Vare.kg_pris}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon id="arrow" name="arrow-forward" item-end></ion-icon>
+      Mer utvalg
+    </ion-item>
+    <ion-item id="ion-item-innhold-varedekl">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <p class="innholdText">Innhold</p>
+          </ion-col>
+          <ion-col>
+            <p class="deklText">Varedeklarasjon</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>

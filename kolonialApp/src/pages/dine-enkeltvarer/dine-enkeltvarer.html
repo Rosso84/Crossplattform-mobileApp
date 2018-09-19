@@ -1,0 +1,37 @@
+<!--
+  Generated template for the DineEnkeltvarerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Dine abonneringer</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<div *ngIf="Varer == 0">
+  <p align="center"> Dine abonnerte abonerteVarer vises her</p>
+</div>
+  <ion-list>
+
+    <ion-item *ngFor="let vare of abonerteVarer | async">
+      <ion-icon class="md-close" name="close" item-end (click)="removeItem(vare)"></ion-icon>
+      <ion-thumbnail item-left>
+        <img class="urlImage" [src]="vare.imgUrl">
+      </ion-thumbnail>
+        <p id="vare-navn">{{vare.vare}}</p>  <p id="vare-pris">{{vare.pris}} stk</p>
+      <p id="antall-txt"> {{vare.antall}} stk </p>
+      <button id="button-antall" (click)="goToEndreAntallPage(vare)">
+        <p id="endre-txt">Endre</p>
+      </button>
+    </ion-item>
+  </ion-list>
+<!--<div text-left id="sum-pris-div">
+  <p id="sum-pris-txt">totalt: kr{{sum}}</p>
+</div>-->
+</ion-content>

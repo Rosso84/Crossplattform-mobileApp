@@ -1,0 +1,59 @@
+page-nyheter {
+
+  .item-md ion-thumbnail ion-img, .item-md ion-thumbnail img{
+    height: 50px;
+    width: 50px;
+    border-radius: 0px;
+  }
+
+  .item-md p {
+    margin: 2px 0px 0px;
+    overflow: inherit;
+    font-size: 1.0rem;
+    line-height: normal;
+    text-overflow: inherit;
+    color: #666;
+  }
+
+  .md-add-circle{
+    color: darkorange;
+  }
+
+  .vare-pris-Txt{
+    color: black;
+  }
+
+  .label-md{
+    #vare-navn{
+       float: left;
+      color: #222222;
+    }
+
+    #vare-pris{
+      float: right;
+      color: #222222;
+    }
+
+
+    #vekt-txt{
+      float: left;
+    }
+
+    #kg-pris-txt{
+      float: right;
+    }
+
+    #under-txt{
+      padding-top: 20px;
+    }
+
+    #antall-txt{
+      float: right;
+    }
+  }
+
+  .md-calendar{
+    color: #8255C3;
+  }
+
+}

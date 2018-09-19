@@ -1,0 +1,28 @@
+<ion-header>
+  <h1 align="center" class="title">Kolonial.no</h1>
+  <p align="center" class="title-note">Din nye matbutikk, <br> rett i lomma.</p>
+</ion-header>
+
+<ion-content padding >
+  <section class="container">
+
+    <ion-item class="input_fields">
+      <ion-label floating>Email</ion-label>
+      <ion-input class="text-input-field" type="text" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item class="input_fields">
+      <ion-label floating>Passord</ion-label>
+      <ion-input class="text-input-field" type="password" [(ngModel)]="password">Password</ion-input>
+    </ion-item>
+
+    <section>
+      <button class="logInn-btn" block ion-button (click)="loggInn()">Logg inn</button>
+      <button class="ny-konto-btn" block ion-button (click)="lagNyKonto()">Lag ny konto</button>
+      <!--<button class="ny-konto-btn" block ion-button (click)="addNewUser()">Oprett bruker</button>-->
+    </section>
+    <p class="priser" align="center">Priser og utlevering</p>
+  </section>
+
+</ion-content>
+

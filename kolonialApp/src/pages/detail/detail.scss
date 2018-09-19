@@ -1,0 +1,52 @@
+page-detail {
+
+  #urlImage{
+    width: 100px;
+    height: 100px;
+    margin-left: 60%;
+    margin-top: 0%;
+  }
+  .greyText{
+    color: #8c8c8c;
+  }
+  .md-add-circle{
+    color: darkorange;
+  }
+  #btn-reduce-antall{
+    color: darkorange;
+  }
+  #arrow{
+    color: #8c8c8c;
+  }
+  #detaljeText{
+    margin-left: 5%;
+    color: #2d2d2d;
+  }
+  .innholdText{
+    color: black;
+  }
+  .deklText{
+    color: #4d4d4d;
+  }
+  #ion-item-innhold-varedekl{
+    background-color: #d9d9d9;
+  }
+  #btnAbonner{
+      background-color: #8255C3;
+    margin-left: 37%;
+    margin-bottom: -4%;
+  }
+
+  $colors: (
+    primary: #8255C3
+  );
+
+#antallvarer-txt{
+  float: right;
+  color: #4d4d4d;
+}
+#antall-nummer-txt{
+  color: #488aff;
+}
+
+}
