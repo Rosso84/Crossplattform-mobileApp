@@ -20,7 +20,9 @@ looking like this
 To make this application work you need to install the the npm modules provided in the package.json file. 
 For this download and install node ( and include npm during installation)  https://nodejs.org/en/download/   .
 Download git bash and open the cli then navigate to the cloned folder till you see package.json file. 
-Then run npm install
+-type 'npm install'  to install.
+-type 'ionic serve -l' to run application on webbrowser
+
 
 
 About:
