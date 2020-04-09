@@ -4,9 +4,9 @@ A hybrid mobile application made with Node , Ionic, Cordova and angular.
 ## For norske : les dokumentasjonen. ## 
 
 # About this application
-This was from a school exam in agile project where kolonial.no was our target.
+This was a school exam in agile project where kolonial.no was our client.
 Our mission was to give this company a new idea or solution to their existing system. 
-We were a group of 8 people who decided to make a webpage with an application similar to it in only 2 weeks. Our idea was the possibility to subscribe  to groceries. So we copied their current application and added some new functionalities.
+We were a group of 8 people who decided to make a webpage with an application similar to it in only 2 weeks. Our idea was to add a new subscribtion option.
  
 I decided to try to take care of the mobile application on my own even though i had very little knowledge in 
 hybrid applications. The app is not fully completed yet due to short period of developementtime, but i will hopefully 
